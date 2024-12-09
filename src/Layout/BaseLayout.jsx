@@ -11,7 +11,7 @@ const BaseLayout = ({ children }) => {
           <div className="w-3/12">
             <SideBar />
           </div>
-          <div className="w-9/12">{children}</div>
+          <div className="w-9/12 px-8 py-6">{children}</div>
         </div>
         <Footer />
       </div>

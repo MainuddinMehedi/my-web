@@ -4,7 +4,7 @@ import ThingsIDo from "../components/ThingsIDo";
 
 const Home = () => {
   return (
-    <div className="space-y-9 p-6">
+    <div className="space-y-9">
       <Greetings />
       <ThingsIDo />
       <RecentPosts />

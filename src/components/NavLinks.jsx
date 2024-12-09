@@ -1,47 +1,86 @@
+import {
+  faAddressCard,
+  faArrowAltCircleDown,
+  faNewspaper,
+  faUser,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faBook,
+  faHome,
+  faQuoteRight,
+  faStreetView,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <div className="space-y-7 p-8 text-[1.02rem]">
-      <div className="">
+    <div>
+      <div>
         <h2 className="text-2xl mb-4 font-bold">Explore</h2>
-        <div className="">
-          <ul className="space-y-2">
+        <div>
+          <ul className="space-y-2 text-base">
             <li>
-              <Link to={"/"}>Home</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon icon={faHome} className="text-green-400" />
+                <Link to={"/"}>Home</Link>
+              </a>
             </li>
             <li>
-              <Link to={"/blogs"}>Blogs</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon
+                  icon={faNewspaper}
+                  className="text-green-400"
+                />
+                <Link to={"/blogs"}>Blogs</Link>
+              </a>
             </li>
             <li>
-              <Link to={"/now-page"}>Now Page</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon
+                  icon={faStreetView}
+                  className="text-green-400"
+                />
+                <Link to={"/now-page"}>Now Page</Link>
+              </a>
             </li>
             <li>
-              <Link to={"/books"}>Books Read</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon icon={faBook} className="text-green-400" />
+                <Link to={"/books"}>Books Read</Link>
+              </a>
             </li>
             <li>
-              <Link to={"/quotes"}>My Quote</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon
+                  icon={faQuoteRight}
+                  className="text-green-400"
+                />
+                <Link to={"/quotes"} className="space-x-2">
+                  My Quote
+                </Link>
+              </a>
             </li>
             <li>
-              <Link to={"/starting-stories"}>The way i got into it</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon
+                  icon={faArrowAltCircleDown}
+                  className="text-green-400"
+                />
+                <Link to={"/starting-stories"}>The way i got into it</Link>
+              </a>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <a href="" className="space-x-2">
+                <FontAwesomeIcon
+                  icon={faAddressCard}
+                  className="text-green-400"
+                />
+                <Link to={"/about"}>About</Link>
+              </a>
             </li>
           </ul>
         </div>
-      </div>
-
-      <div className="text-2xl font-bold">
-        <h2>Follow</h2>
-      </div>
-
-      <div className="text-2xl font-bold">
-        <h2>Recent Photos</h2>
-      </div>
-
-      <div className="text-2xl font-bold">
-        <h2>Tags</h2>
       </div>
     </div>
   );

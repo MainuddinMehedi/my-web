@@ -1,14 +1,29 @@
+import { useContext } from "react";
+import { GlobalContext } from "../context/context";
+import BlogCard from "./BlogCard";
+
 const RecentPosts = () => {
+  const { blogs, loading } = useContext(GlobalContext);
+
+  if (loading) return <h1>Loading.. Please wait!!</h1>;
+
   return (
-    <div>
-      <h1 className="text-5xl font-extrabold">Recent Posts</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, a eum
-        dolorem sed aperiam voluptates culpa eveniet eaque ullam officia esse
-        explicabo voluptate et animi eos nulla odit quisquam laborum repellat
-        illo id nostrum. Eligendi incidunt nemo perspiciatis aperiam
-        necessitatibus?
-      </p>
+    <div className="space-y-7">
+      <div className="space-y-5">
+        <h1 className="text-5xl font-extrabold">Recent Posts</h1>
+
+        <div className="space-y-8">
+          {blogs && blogs?.length > 0 ? (
+            blogs
+              ?.slice(0, 5)
+              .map((eachBlog) => (
+                <BlogCard eachBlogs={eachBlog} key={eachBlog?.id} />
+              ))
+          ) : (
+            <h2>no products found!!</h2>
+          )}
+        </div>
+      </div>
 
       <div className="flex justify-center">
         <div className="py-1 w-24 bg-[#fff5cfda]"></div>
